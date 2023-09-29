@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Maven+Pro&display=swap');
+       
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+    min-width: 100vw;
+    margin:0;
+    background: url(../images/mathematical-formulas.jpg) no-repeat;
+    background-size: 200% 100%;
+    animation: mirrorBackground 20s linear infinite alternate;
+    position: relative;
+}
+
+.total {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: grid;
+  margin:auto;
+  grid-template-areas: 'header' 'main' 'footer';
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+.topnav {
+  grid-area: header;
+  width: 90%;
+  overflow: hidden;
+  margin-top: 20px;
+  height: 50px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border-radius: 35px;
+  color: #ffffff;
+  text-align: center;
+  padding-bottom: 20px;
+  background: #007bffe8;
+  box-shadow: 0 0 10px black;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-family: 'Kanit', sans-serif;
+}
+.logonav {
+  float: left;
+  background-color: rgba(54, 115, 19, 0);
+  background-size: contain;
+  background-image: url(../images/LogoWhite.svg);
+  display: flex;
+  height: 50px;
+  width: 50px;
+  margin-left: 20px;
+  margin-top: 10px;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  position: fixed;
+}
+
+.container {
+  grid-area: main;
+  text-align: center;
+  max-width: 400px;
+  padding: 20px;
+  height: min-content;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.641);
+}
+
+.footer {
+  grid-area: footer;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: min-content;
+  padding: 15px 0;
+  font-size: 8px;
+  text-align: center;
+  color: #007bff;
+  border-top: 1px solid #007bffe8;
+  background-color: #f9f9f9;
+}
+
+@keyframes mirrorBackground {
+  to {
+    background-position: 100% 0;
+  }
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.container h1 {
+  color: #007bff;
+}
+
+p {
+  line-height: 22px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+a{
+    color: #007bff;
+}
+input[type="text"] {
+  border: 1px solid #007bff;
+  font-family: 'Poppins', sans-serif;
+  color: #007bff;
+  border-radius: 35px;
+  margin: 20px;
+  padding: 8px;
+  font-size: 16px;
+}
+
+button {
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 35px;
+  background-color: #007bff;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#hint-paragraph {
+  color: #007bff;
+  font-size: 16px;
+  font-style: italic;
+}
+/*MODAL*/
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  -webkit-animation-name: fadeIn; /* Fade in the background */
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.8s
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  margin: 40% auto;
+  transform:translateY(-50%);
+  background-color: #fefefe;
+  width: 400px;
+  border-radius: 10px;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 6px;
+  background-color: #007bff;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #007bff;
+  color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {bottom: -300px; opacity: 0} 
+  to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
