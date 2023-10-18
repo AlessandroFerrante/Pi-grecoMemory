@@ -38,7 +38,7 @@ body {
   box-shadow: 0 0 10px black;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  font-family: 'Kanit', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 .logonav {
   float: left;
