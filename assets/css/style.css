@@ -5,11 +5,12 @@ body {
     overflow-x: hidden;
     min-height: 100vh;
     min-width: 100vw;
-    margin:0;
-    background: url(../images/mathematical-formulas.jpg) no-repeat;
+    margin:0;  background: 
+    linear-gradient(145deg, #e1e1e1, #ffffff);
+    /*background: url(../images/mathematical-formulas.jpg) no-repeat;
     background-size: 200% 100%;
-    animation: mirrorBackground 20s linear infinite alternate;
-    position: relative;
+    /*animation: mirrorBackground 20s linear infinite alternate;
+    position: relative;*/
 }
 
 .total {
@@ -17,7 +18,7 @@ body {
   min-width: 100vw;
   display: grid;
   margin:auto;
-  grid-template-areas: 'header' 'main' 'footer';
+  grid-template-areas: 'header' 'main' 'main' 'footer';
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
 }
@@ -27,29 +28,30 @@ body {
   width: 90%;
   overflow: hidden;
   margin-top: 20px;
-  height: 50px;
+  height: 40px;
   margin-left: 50%;
   transform: translateX(-50%);
   border-radius: 35px;
   color: #ffffff;
+  font-size: 10px;
   text-align: center;
-  padding-bottom: 20px;
-  background: #007bffe8;
-  box-shadow: 0 0 10px black;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  border-radius: 33px;
+  background: linear-gradient(145deg, #006fe6, #0084ff);
+  box-shadow:  2px 2px 5px #0074f0,
+               -2px -2px 5px #0082ff;
   font-family: 'Poppins', sans-serif;
+  line-height: 15px;  /* Aggiungi questa riga */
 }
+
 .logonav {
   float: left;
   background-color: rgba(54, 115, 19, 0);
   background-size: contain;
-  background-image: url(../images/LogoWhite.svg);
+  background-image: url(../images/LogoW.svg);
   display: flex;
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   margin-left: 20px;
-  margin-top: 10px;
   background-repeat: no-repeat;
   text-decoration: none;
   position: fixed;
@@ -62,23 +64,59 @@ body {
   padding: 20px;
   height: min-content;
   margin: 0 auto;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.641);
+  border-radius: 50px;
+  line-height: 16px;
+  font-size: 14px;
+  background: linear-gradient(145deg, #e1e1e1, #ffffff);
+  box-shadow:  35px 35px 70px #d5d5d5,
+              -35px -35px 70px #ffffff;
 }
-
+.button-grid {
+  grid-area: main;
+  height:250px;
+  margin: 0 auto;
+  margin-top: 345px;
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  gap: 8px;
+  max-width: fit-content;
+  padding: 40px;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #e1e1e1, #ffffff);
+  box-shadow:  35px 35px 70px #d5d5d5,
+              -35px -35px 70px #ffffff;
+}
+.number-button {
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 75px;
+  background: #007bff;
+  box-shadow:  3px 3px 6px #0064cf,
+            -3px -3px 6px #0092ff;
+  border: none;
+  user-select: none;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+.button:active,
+.button:focus {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  box-shadow: none;
+}
 .footer {
   grid-area: footer;
   position: fixed;
+  margin-top: 0;
   bottom: 0;
   width: 100%;
-  height: min-content;
-  padding: 15px 0;
-  font-size: 8px;
+  font-size: 10px;
   text-align: center;
   color: #007bff;
   border-top: 1px solid #007bffe8;
-  background-color: #f9f9f9;
+  border-radius: 0px;
+  background: #f9f9f9;
+
 }
 
 @keyframes mirrorBackground {
@@ -87,19 +125,12 @@ body {
   }
 }
 
-h1 {
-  color: #ffffff;
-  font-size: 24px;
-}
-
 .container h1 {
   color: #007bff;
 }
-
-p {
-  line-height: 22px;
-  font-size: 16px;
-  margin-bottom: 20px;
+.container p{
+  font-size: smaller;
+  font-weight: 500;
 }
 a{
     color: #007bff;
@@ -109,30 +140,59 @@ input[type="text"] {
   font-family: 'Poppins', sans-serif;
   color: #007bff;
   border-radius: 35px;
+  background: #fafafa;
+  box-shadow: inset 3px 3px 6px #d5d5d5,
+              inset -3px -3px 6px #ffffff;
   margin: 20px;
-  padding: 8px;
+  padding: 5px;
   font-size: 16px;
+  
+}
+
+#score {
+  font-size: 22px;
+  color: #007bff;
+  transition: font-size 0.5s ease, color 0.5s ease; 
+}
+.scoreIncreased {
+  color: #00cc00; /* Colore verde */
+}
+#highscore{
+  color: #00cc00;
+  font-size: medium;
+}
+input[type=text]:focus {
+  border:none;
 }
 
 button {
-  padding: 8px 16px;
-  font-size: 16px;
+  padding: 8px 10px;
+  font-size: 14px;
   border-radius: 35px;
   background-color: #007bff;
   color: #fff;
   font-weight: 600;
   border: none;
   cursor: pointer;
+    border-radius: 75px;
+  background: #007bff;
+  box-shadow:  3px 3px 6px #0064cf,
+              -3px -3px 6px #0092ff;
+  user-select: none;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #0064cf;
 }
 
 #hint-paragraph {
   color: #007bff;
   font-size: 16px;
   font-style: italic;
+  animation-name: fadeIn;
+  animation-duration: 0.8s
 }
 /*MODAL*/
 .modal {
@@ -149,7 +209,9 @@ button:hover {
   -webkit-animation-name: fadeIn; /* Fade in the background */
   -webkit-animation-duration: 0.4s;
   animation-name: fadeIn;
-  animation-duration: 0.8s
+  animation-duration: 0.4s;
+  top: 50%;
+  transform: translateY(-50%)
 }
 
 /* Modal Content */
@@ -190,8 +252,13 @@ button:hover {
   border-top-right-radius: 10px;
 }
 
-.modal-body {padding: 2px 16px;}
+.modal-body {
+  padding: 2px 16px;
+}
+.modal-body p{
 
+  word-wrap: break-word; 
+}
 .modal-footer {
   padding: 2px 16px;
   background-color: #007bff;

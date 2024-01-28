@@ -11,7 +11,7 @@
     <meta content="Ferrante, Alessandro , Ferrante , Alessandro , Ferrante , Alessandro , ferrante alessandro, alessandro ferrante,alessandro ferrante,alessandro ferrante, full stack developer,developer, siti web, modica, gestionali, informatico, sistemazione computer, gestione server, hosting, gestione dominio" name="keywords">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Memorize Pi Digits - 3.14π</title>
-    <link rel="icon" href="assets/images/LogoWhite.svg">
+    <link rel="icon" href="assets/images/LogoW.svg">
     <link type="text/css" href="assets/css/style.css" rel="stylesheet">
 </head>
 <body>
@@ -30,7 +30,6 @@
     <div class="modal-footer">
     </div>
   </div>
-
 </div>
 
     <div class="total">
@@ -40,11 +39,18 @@
         </div>
         <div class="container">
             <h1>π 3.14</h1>
-            <h2 id="score"></h2>
-            <p>Enter the digits of the Pi number</p>
+            <h2 id="highscore"></h2>
+            <h2 id="score" class="" ></h2>
+            <p >Enter the digits of the Pi number</p>
             <p id="hint-paragraph"></p>
             <input type="text" id="pi-input" value="" />
-            <button onclick="checkInput()">Check</button>
+            <!--<button onclick="checkInput()">Check</button>-->
+        </div>
+        <div class="button-grid" id="buttonGrid">
+          <!-- Buttons will be generated dynamically using JavaScript -->
+          <button onclick="checkInput()">Check</button>
+          <button style="padding: 0%;"><a href="https://alessandroferrante.netlify.app/" ><img src="assets/images/LogoW.svg" style="height: 30px; top: 11px;" alt=""></a></button>
+          <button onclick="removeLastDigit()">CE</button>
         </div>
         <div class="footer">
             <p>© 2023 Powered by <a href="https://alessandroferrante.netlify.app/">Alessandro Ferrante</a>. All rights reserved.</p>
